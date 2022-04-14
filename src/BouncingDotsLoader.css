@@ -1,0 +1,44 @@
+.bouncingLoader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncingLoader > div:first-child {
+  background-image: linear-gradient(90deg, #ea5398, #f9aa7d, #e6be93);
+}
+
+.bouncingLoader > div:nth-child(2) {
+  background-image: linear-gradient(90deg, #a5c4c8, #65c1e6, #3abff0, #35aae1);
+}
+
+.bouncingLoader > div:last-child {
+  background-image: linear-gradient(90deg, #3879bd, #3d59a5, #3f4d9c);
+}
+
+.bouncingLoader > div {
+  width: 14px;
+  height: 14px;
+  margin: 3px 3px;
+  border-radius: 50%;
+  opacity: 1;
+  animation: bouncingLoader 0.6s infinite alternate;
+  animation-duration: 0.6s;
+  animation-name: bouncingLoader;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bouncingLoader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+.bouncingLoader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncingLoader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
